@@ -1,0 +1,45 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  margin: 20px 20px;
+  color: black;
+  background-image: linear-gradient(50deg, #f6d365, #fd6864);
+  font-family: "Roboto Slab", serif;
+  min-height: 100vh;
+}
+
+h1 {
+  margin-top: 10px;
+  position: center;
+  text-align: center;
+}
+
+.To-Do_Element {
+  min-height: 20vh;
+  margin-top: 10px;
+  border-style: dashed;
+
+  .formHeading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+  }
+
+  .infoBox {
+    @extend .formHeading; //to inherit the properties of one class to another
+    margin-top: 20px;
+    border: none;
+  }
+}
+
+form button,
+form input {
+  padding: 3px 3px;
+  border: none;
+  background: white;
+  font-size: 0.7em;
+}

@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <!-- Browser does not understand scss so always attach css file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./main_code/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;400&display=swap" rel="stylesheet">
+    <title>To do list with JavaScript</title>
 </head>
 <body>
+    <header>
+
+        <h1>Vanilla JavaScript tutorial.</h1>
+    </header>
     
+    <div class="To-Do_Element">
+        <div class="formHeading">To-Do list</div>
+      
+    <!-- for creating a input Field box -->
+    
+        <form class=infoBox>
+            <input type="text" class="to-do_Input"> 
+            <button class="btn-class"> <i class="fas fa-plus-square"></i></button>        
+        </form>
+    </div>
+    <script src="/main.js"></script>
 </body>
 </html>
