@@ -2,7 +2,7 @@
   margin: 0px;
   padding: 0px;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -21,34 +21,110 @@ h1 {
 
 .To-Do_Element {
   min-height: 20vh;
-  margin-top: 10px;
-  border-style: dashed;
+  margin-top: 100px;
 }
 
-.To-Do_Element .formHeading,
-.To-Do_Element .infoBox {
+.formHeading, .infoBox {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 2em;
 }
 
-.To-Do_Element .infoBox {
+.infoBox {
   margin-top: 20px;
-  border: none;
+  outline: none;
 }
 
 form button,
 form input {
-  padding: 3px 3px;
+  padding: 3px 5px;
   border: none;
   background: white;
-  font-size: 0.7em;
+  color: black;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+form button {
+  color: #fd6864;
+}
+
+form button:hover {
+  color: white;
+  background: #fd6864;
+  border: #fd6864;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.todo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.to-do-list {
+  list-style: none;
+  min-width: 30%;
+}
+
+.to-do-task {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+  background-color: white;
+  font-size: 1.5em;
+}
+
+.to-do-list li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.check-button,
+.trash-button {
+  color: #fd6864;
+  background-color: white;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1em;
+  border: none;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.trash-button:hover {
+  color: white;
+  background: #fd6864;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.check-button:hover {
+  color: white;
+  background: #fd6864;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
 }
 /*# sourceMappingURL=style.css.map */
