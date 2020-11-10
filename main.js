@@ -7,13 +7,15 @@ const todoList =  document.querySelector(".to-do-list");
 // sytax for adding a event 
 //(variableName.addEventListener('event',functionToBeCalledForEvent)
 
-btnInput.addEventListener('click',storeTodo);
+btnInput.addEventListener('click',storeTodoTask);  // adding event when button is clicked
+todoList.addEventListener('click',deleteOrCheckTodoTask);  // adding event when button is clicked
 
 // Functions
 //syntax for adding a function using arrow function.
 // functionName () => {}
 
- function storeTodo(event) {
+//funtion for storin todo task. 
+ function storeTodoTask(event) {
      //prevent page from reloading for submission.
      event.preventDefault();
 
@@ -23,7 +25,6 @@ btnInput.addEventListener('click',storeTodo);
     //    <li class="to-do">hey</li>
     //       <button class="check-button">< class="fas fa-check-square"></ i><button>
     //       <button class="trash-button"><i class="fas fa-trash-alt"></i></button>
-    //    
     // </div>
 /***************************************************************************************************************************************/
 
@@ -56,4 +57,36 @@ btnInput.addEventListener('click',storeTodo);
      
      //CLEAR INPUT VALUE
      todoInput.value=' ';   //for clearing the input value after storing
+    
+ }
+
+// Function for deleting the todo task
+
+function deleteOrCheckTodoTask(event)
+{
+   const targetItem=event.target;
+
+   //delete task
+   if(targetItem.classList[0]==="trash-button")
+   {
+       const itemToDelete= targetItem.parentElement;  // to delete the entire div
+       itemToDelete.classList.add("animateBeforeFall");  //animate
+       console.log("hello world1");
+        // itemToDelete.remove();
+    //    itemToDelete.addEventListener("animateEnd",deleteItem);
+/*******************SOLVE THE REMOVE ANIMATION ISSUE ****************************/
+   }
+//    function deleteItem (event)
+//    {
+//         console.log("hello world");
+//    }
+   //mark as completed
+   if(targetItem.classList[0] ==="check-button")
+   {
+       const completedItem= targetItem.parentElement;  // to delete the entire div
+       completedItem.classList.toggle("completed");   // here completed is a class name used in css not a text.       
+   }
+
+                                       
+
 }

@@ -93,7 +93,9 @@ form button:hover {
           align-items: center;
   margin-top: 10px;
   background-color: white;
-  font-size: 1.5em;
+  font-size: 1em;
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
 }
 
 .to-do-list li {
@@ -108,10 +110,14 @@ form button:hover {
   background-color: white;
   padding: 10px;
   cursor: pointer;
-  font-size: 1em;
+  font-size: 1.5em;
   border: none;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
+}
+
+.check-button {
+  color: green;
 }
 
 .trash-button:hover {
@@ -123,8 +129,31 @@ form button:hover {
 
 .check-button:hover {
   color: white;
-  background: #fd6864;
+  background: green;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
+}
+
+.fa-check-square,
+.fa-trash-alt,
+.fa-plus-square {
+  pointer-events: none;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+.animateBeforeFall {
+  -webkit-transform: translateX(8rem);
+          transform: translateX(8rem);
+  opacity: 0;
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
+}
+
+.animateEnd {
+  color: #f6d365;
 }
 /*# sourceMappingURL=style.css.map */
