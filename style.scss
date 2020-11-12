@@ -21,11 +21,9 @@ h1 {
   text-align: center;
 }
 
-.To-Do_Element {
-  min-height: 20vh;
-  margin-top: 100px;
-}
+//box around the input and select option box
 .formHeading {
+  margin: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,10 +36,10 @@ h1 {
   outline: none;
 }
 
+//for input box and square icon
 form button,
 form input {
-  padding: 3px 5px;
-  border: none;
+  padding: 5px 5px;
   background: white;
   color: black;
   cursor: pointer;
@@ -59,17 +57,19 @@ form button:hover {
   transition: all 0.3s ease-in;
 }
 
+//container todo tasks
 .todo-container {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 360px;
+  width: 30%;
 }
 
 //ul
 .to-do-list {
   list-style: none;
-  min-width: 30%;
-  // min-height: 30%;
+  min-width: 85%; //it is 70% of the container
 }
 
 //li
@@ -79,7 +79,7 @@ form button:hover {
   align-items: center;
   margin-top: 10px;
   background-color: white;
-  font-size: 1em;
+  font-size: 1.2em;
   transition: all 0.7s ease; // animation on completed task
 }
 
@@ -98,6 +98,10 @@ form button:hover {
   transition: all 0.3s ease-in; // animation on check and trash buttton
 }
 
+.btn-class,
+.to-do-Input {
+  border: none;
+}
 .check-button {
   color: green;
 }
@@ -126,9 +130,36 @@ form button:hover {
 .animateBeforeFall {
   transform: translateX(8rem); // for dragging the item down before removing
   opacity: 0; // fadding out the removing item
-  transition: all 0.7s ease-out;
+  transition: all 0.5s ease-out;
 }
 
-.animateEnd {
-  color: #f6d365;
+// styling the on the select attribute
+select {
+  // -webkit-appearance: none;
+  // -moz-appearance: none;
+  // appearance: none;
+  outline: none;
+  border: none;
 }
+
+.selectDiv {
+  display: flex;
+  margin: 10px;
+  position: relative;
+  // overflow: hidden;
+}
+
+select {
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 0.5em;
+  font-weight: bold;
+  // pointer-events: none;
+}
+
+// .fa-caret-square-down {
+//   color: black;
+//   background-color: black;
+//   border-style: solid;
+// }

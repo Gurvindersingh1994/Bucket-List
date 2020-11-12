@@ -19,12 +19,8 @@ h1 {
   text-align: center;
 }
 
-.To-Do_Element {
-  min-height: 20vh;
-  margin-top: 100px;
-}
-
 .formHeading, .infoBox {
+  margin: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -44,8 +40,7 @@ h1 {
 
 form button,
 form input {
-  padding: 3px 5px;
-  border: none;
+  padding: 5px 5px;
   background: white;
   color: black;
   cursor: pointer;
@@ -74,11 +69,13 @@ form button:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-left: 360px;
+  width: 30%;
 }
 
 .to-do-list {
   list-style: none;
-  min-width: 30%;
+  min-width: 85%;
 }
 
 .to-do-task {
@@ -93,7 +90,7 @@ form button:hover {
           align-items: center;
   margin-top: 10px;
   background-color: white;
-  font-size: 1em;
+  font-size: 1.2em;
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
 }
@@ -114,6 +111,11 @@ form button:hover {
   border: none;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
+}
+
+.btn-class,
+.to-do-Input {
+  border: none;
 }
 
 .check-button {
@@ -149,11 +151,28 @@ form button:hover {
   -webkit-transform: translateX(8rem);
           transform: translateX(8rem);
   opacity: 0;
-  -webkit-transition: all 0.7s ease-out;
-  transition: all 0.7s ease-out;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 
-.animateEnd {
-  color: #f6d365;
+select {
+  outline: none;
+  border: none;
+}
+
+.selectDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px;
+  position: relative;
+}
+
+select {
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+  font-size: 0.5em;
+  font-weight: bold;
 }
 /*# sourceMappingURL=style.css.map */
