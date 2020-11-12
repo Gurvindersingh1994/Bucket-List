@@ -1,70 +1,58 @@
 // Selectors
-const todoInput=  document.querySelector(".to-do-Input"); //for selecting a class from CSS.
+const todoInput=  document.querySelector(".to-do-Input"); 
 const btnInput =  document.querySelector(".btn-class");
 const todoList =  document.querySelector(".to-do-list");
-const optionBtn=  document.querySelector(".select-option");
 
 // Events
-
-
-// sytax for adding a event ***** (variableName.addEventListener('event',functionToBeCalledForEvent)*****
-
-btnInput.addEventListener('click',storeTodoTask);  // adding event when button is clicked
-todoList.addEventListener('click',deleteOrCheckTodoTask);  // adding event when button is clicked
-optionBtn.addEventListener('click',filterTodoTasks);
+btnInput.addEventListener('click',storeTodoTask);  
+todoList.addEventListener('click',deleteOrCheckTodoTask);  
 
 // Functions
-//syntax for adding a function using arrow function.
-// functionName () => {}
 
 //funtion for storing todo task. 
- function storeTodoTask(event) {
-     //prevent page from reloading for submission.
-     event.preventDefault();
+ function storeTodoTask(event) 
+ {  
+    event.preventDefault();
 
-/***************************************************************************************************************************************/
-    // we can do HTML and CSS coding in Javascript as well. we will create the code below in comment section using Javascript.
+    /****************************************************************************************/
+    // Created the below HTML code in Javascript.
     // <div class="to-do-task">
     //    <li class="to-do">hey</li>
     //       <button class="check-button">< class="fas fa-check-square"></ i><button>
     //       <button class="trash-button"><i class="fas fa-trash-alt"></i></button>
     // </div>
-/***************************************************************************************************************************************/
+    /***************************************************************************************/
 
-    // CREATE TODO DIV
-    const TodoDiv = document.createElement("div"); // for creating a div element in html file.
-    TodoDiv.classList.add("to-do-task");// for adding class inside a div.
+    // CREATE  DIV TAG
+    const TodoDiv = document.createElement("div"); 
+    TodoDiv.classList.add("to-do-task");
 
     // CREATE LI TAG
-    const newTodo = document.createElement("li"); // for creating li in a div
-   
+    const newTodo = document.createElement("li"); 
     newTodo.innerText= todoInput.value; // for adding text inside the li tag.
     newTodo.classList.add('to-do');  // giving class name to li
-    // for adding a tag to the div syntax : divNameInWhichToAddTag.appenedchild(tagNameToBeAdded);
     TodoDiv.appendChild(newTodo); // for adding li tag in TodoDiv.
 
     //CREATE CHECK BUTTON
     const checkButton = document.createElement('button');
-    checkButton.classList.add('check-button');     //create class name
-    checkButton.innerHTML= '<i class="fas fa-check-square"></i>'; //we can also add any html tag using this method as well.
-    TodoDiv.appendChild(checkButton); // for adding the button inside a div.
+    checkButton.classList.add('check-button');     
+    checkButton.innerHTML= '<i class="fas fa-check-square"></i>'; 
+    TodoDiv.appendChild(checkButton); 
   
     //CREATE TRASH BUTTON
     const trashButton = document.createElement('button');
-    trashButton.classList.add('trash-button');      //create class name
+    trashButton.classList.add('trash-button');      
     trashButton.innerHTML= '<i class="fas fa-trash-alt"></i>'; 
-    TodoDiv.appendChild(trashButton); // for adding the button inside a div.
+    TodoDiv.appendChild(trashButton); 
 
-    //APPEND DIV created above with ul tag in the index.html.
-     todoList.appendChild(TodoDiv);
+    //Append DIV to UL tag in the index.html.
+    todoList.appendChild(TodoDiv);
      
-     //CLEAR INPUT VALUE
-     todoInput.value=' ';   //for clearing the input value after storing
-    
+    //CLEAR INPUT VALUE
+    todoInput.value=' ';   //for clearing the input value after storing 
  }
 
-// Function for marking or deleting the todo task
-
+// Function for marking check or deleting the todo task
 function deleteOrCheckTodoTask(ev)
 {
    const targetItem=ev.target;
@@ -72,7 +60,7 @@ function deleteOrCheckTodoTask(ev)
    //delete task
    if(targetItem.classList[0]==="trash-button")
    {
-       const itemToDelete= targetItem.parentElement;  // to delete the entire div
+       const itemToDelete= targetItem.parentElement;  
        itemToDelete.classList.add("animateBeforeFall");  //animate
        setTimeout(waitForAnimation, 600);   //delay function
        
@@ -85,20 +73,7 @@ function deleteOrCheckTodoTask(ev)
    //mark as completed
    if(targetItem.classList[0] ==="check-button")
    {
-       const completedItem= targetItem.parentElement;  // to delete the entire div
-       completedItem.classList.toggle("completed");   // here completed is a class name used in css not a text.       
+       const completedItem= targetItem.parentElement;  
+       completedItem.classList.toggle("completed");          
    }                        
-}
-
-
-function filterTodoTasks(e)
-{
-    // const todos=e.target.value;
-    const todo= e.target.value;
-    console.log(todo);
-    // console.log(todos);
-    if(todo ==='ALL')
-    {
-        console.log("hello");
-    }
 }

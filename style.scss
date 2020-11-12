@@ -1,3 +1,4 @@
+//variables
 $light-yellow: #f6d365;
 $light-pink: #fd6864;
 
@@ -16,12 +17,11 @@ body {
 }
 
 h1 {
-  margin-top: 10px;
+  margin-top: 110px;
   position: center;
   text-align: center;
 }
 
-//box around the input and select option box
 .formHeading {
   margin: 20px;
   display: flex;
@@ -43,7 +43,7 @@ form input {
   background: white;
   color: black;
   cursor: pointer;
-  font-size: 0.9em; // font size of the first text box
+  font-size: 0.9em;
 }
 
 form button {
@@ -57,12 +57,11 @@ form button:hover {
   transition: all 0.3s ease-in;
 }
 
-//container todo tasks
 .todo-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 360px;
+  margin-left: 450px;
   width: 30%;
 }
 
@@ -128,38 +127,7 @@ form button:hover {
   opacity: 0.4;
 }
 .animateBeforeFall {
-  transform: translateX(8rem); // for dragging the item down before removing
-  opacity: 0; // fadding out the removing item
+  transform: translateX(8rem);
+  opacity: 0;
   transition: all 0.5s ease-out;
 }
-
-// styling the on the select attribute
-select {
-  // -webkit-appearance: none;
-  // -moz-appearance: none;
-  // appearance: none;
-  outline: none;
-  border: none;
-}
-
-.selectDiv {
-  display: flex;
-  margin: 10px;
-  position: relative;
-  // overflow: hidden;
-}
-
-select {
-  width: 10rem;
-  cursor: pointer;
-  padding: 1rem;
-  font-size: 0.5em;
-  font-weight: bold;
-  // pointer-events: none;
-}
-
-// .fa-caret-square-down {
-//   color: black;
-//   background-color: black;
-//   border-style: solid;
-// }

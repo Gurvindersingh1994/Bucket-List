@@ -3,11 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Browser does not understand scss so always attach css file -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-
     <link rel="stylesheet" href="./main_code/style.css">
-
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;400&display=swap" rel="stylesheet">
       
     <title>The Bucket List</title>
@@ -15,39 +12,22 @@
 
 <body>
     <header>
-            <h1>Your Bucket List </h1>
-        </header>
+        <h1>Your Bucket List </h1>
+    </header>
     
-    <!-- for creating a input Field box -->
-   
-            <form class="infoBox">
-                <input type="text" class="to-do-Input"> 
-                <button class="btn-class"> 
+    <!-- input Field box -->
+    <form class="infoBox">
+        <input type="text" class="to-do-Input"> 
+            <button class="btn-class"> 
                 <i class="fas fa-plus-square"></i>
-                </button> 
-
-                <!-- To create a option dialouge box --> 
-                <div class="selectDiv">
-                    <select class="select-option">
-                        <option  value="All"> <b>All</b> </option>
-                        <option  value="Completed"> <b>Completed</b> </option>
-                        <option  value="Uncompleted"><b>Uncompleted</b></option>
-                    </select> 
-                    <!-- <button class="btn-class" Id="dropDownBtn">
-                        <i class="fas fa-caret-square-down"></i>
-                    </button>                        -->
-                </div> 
-            </form> 
-            
-    <!-- for to-do container /**** we can achieve same thing with JavaScript as well.  -->
+            </button> 
+    </form> 
     <div class="todo-container">
         <ul class="to-do-list">
             <!-- li attached to this list is created in javascript -->
-
         </ul>
     </div>  
-
-
+    
     <script src="/main.js"></script>
 </body>
 </html>
