@@ -2,19 +2,22 @@
 const todoInput=  document.querySelector(".to-do-Input"); //for selecting a class from CSS.
 const btnInput =  document.querySelector(".btn-class");
 const todoList =  document.querySelector(".to-do-list");
+const optionBtn=  document.querySelector(".select-option");
 
 // Events
-// sytax for adding a event 
-//(variableName.addEventListener('event',functionToBeCalledForEvent)
+
+
+// sytax for adding a event ***** (variableName.addEventListener('event',functionToBeCalledForEvent)*****
 
 btnInput.addEventListener('click',storeTodoTask);  // adding event when button is clicked
 todoList.addEventListener('click',deleteOrCheckTodoTask);  // adding event when button is clicked
+optionBtn.addEventListener('click',filterTodoTasks);
 
 // Functions
 //syntax for adding a function using arrow function.
 // functionName () => {}
 
-//funtion for storin todo task. 
+//funtion for storing todo task. 
  function storeTodoTask(event) {
      //prevent page from reloading for submission.
      event.preventDefault();
@@ -60,33 +63,42 @@ todoList.addEventListener('click',deleteOrCheckTodoTask);  // adding event when 
     
  }
 
-// Function for deleting the todo task
+// Function for marking or deleting the todo task
 
-function deleteOrCheckTodoTask(event)
+function deleteOrCheckTodoTask(ev)
 {
-   const targetItem=event.target;
+   const targetItem=ev.target;
 
    //delete task
    if(targetItem.classList[0]==="trash-button")
    {
        const itemToDelete= targetItem.parentElement;  // to delete the entire div
        itemToDelete.classList.add("animateBeforeFall");  //animate
-       console.log("hello world1");
-        // itemToDelete.remove();
-    //    itemToDelete.addEventListener("animateEnd",deleteItem);
-/*******************SOLVE THE REMOVE ANIMATION ISSUE ****************************/
+       setTimeout(waitForAnimation, 600);   //delay function
+       
+       function waitForAnimation()
+       {
+            itemToDelete.remove();
+       }
    }
-//    function deleteItem (event)
-//    {
-//         console.log("hello world");
-//    }
+
    //mark as completed
    if(targetItem.classList[0] ==="check-button")
    {
        const completedItem= targetItem.parentElement;  // to delete the entire div
        completedItem.classList.toggle("completed");   // here completed is a class name used in css not a text.       
-   }
+   }                        
+}
 
-                                       
 
+function filterTodoTasks(e)
+{
+    // const todos=e.target.value;
+    const todo= e.target.value;
+    console.log(todo);
+    // console.log(todos);
+    if(todo ==='ALL')
+    {
+        console.log("hello");
+    }
 }

@@ -15,27 +15,37 @@
 
 <body>
     <header>
-            <h1>Vanilla JavaScript tutorial.</h1>
+            <h1>Your Bucket List </h1>
         </header>
     
     <!-- for creating a input Field box -->
-    <div class="To-Do_Element">
-        <div class="formHeading"> Your Bucket List</div>
-            <form class=infoBox>
-            <input type="text" class="to-do-Input"> 
-            <button class="btn-class"> 
-            <i class="fas fa-plus-square"></i>
-            </button>        
-        </form>
-    </div>
+   
+            <form class="infoBox">
+                <input type="text" class="to-do-Input"> 
+                <button class="btn-class"> 
+                <i class="fas fa-plus-square"></i>
+                </button> 
 
+                <!-- To create a option dialouge box --> 
+                <div class="selectDiv">
+                    <select class="select-option">
+                        <option  value="All"> <b>All</b> </option>
+                        <option  value="Completed"> <b>Completed</b> </option>
+                        <option  value="Uncompleted"><b>Uncompleted</b></option>
+                    </select> 
+                    <!-- <button class="btn-class" Id="dropDownBtn">
+                        <i class="fas fa-caret-square-down"></i>
+                    </button>                        -->
+                </div> 
+            </form> 
+            
     <!-- for to-do container /**** we can achieve same thing with JavaScript as well.  -->
     <div class="todo-container">
         <ul class="to-do-list">
             <!-- li attached to this list is created in javascript -->
 
         </ul>
-    </div>
+    </div>  
 
 
     <script src="/main.js"></script>
